@@ -10,3 +10,9 @@ Plan - Write out some pseudocode to break down the problem into smaller, more ma
 Divide - Solve the sub-problems, simplest first. Then connect the dots.
 
 !important<COMMENTS ARE CODE!> (code explains your comments to the computer!)
+
+UPDATE: 11/26 - This project was challenging on a few fronts. I had gone over the functions aspect of The Odin Academy, but they seemed pretty foreign to me at the time of this assignment. Like I've heard from other programmers, new people try start from scratch...and then scratch their heads. I felt this way. I am guilty of perusing through other solutions in order to spark my own code. While I am not satisfied I could't write it from scratch, I still tried my hardest to only get small hints from other code and then create my own and problem solve from there.
+
+I began with writing pseudocode, I found this INCREDIBLY helpful. I then tried to break the problem down into smaller problems. I was able to do this, but as a beginner, I didn't quite do it in the order I perhaps should have - this was a lesson I learned from this project.
+
+Overall, I made great progress with understand how functions work as well the ability to create functions early to call them later. Looking forward to getting better at functions! 
