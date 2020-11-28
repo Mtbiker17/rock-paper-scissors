@@ -1,28 +1,24 @@
-<!DOCTYPE html>
-<head>
-    <title>Rock, Paper, Scissors!</title>
-<style>
-.mainHeader{
-    text-align: center;
-}
-</style>
-</head>
-<body>
-<h1 class="mainHeader">Rock, Paper, Scissors!</h1>
-<h2 class="mainHeader">I challenge you to beat the computer...</h2>
-
 <!-- /* Build a program where a user will input Rock, Paper, or Scissors
 (case-insensitive). The computer will then select a random response of 
 rock, paper or scissors. Make the program compare answers, and prompt whether or 
 not the user lost or won based on the the user input and computer output */ -->
 <!-- Use console.log to see results, front end will be added later -->
 
+<!DOCTYPE html>
+<head>
+    <title>Rock, Paper, Scissors!</title>
+    <style>
+.mainHeader{
+    text-align: center;
+}
+    </style>
+</head>
+    <body>
+        <h1 class="mainHeader">Rock, Paper, Scissors!</h1>
+        <h2 class="mainHeader">I challenge you to beat the computer...</h2>
+
 <script>
 //Create a function that has the computer randomly select rock, paper or scissors;   
-    //declare a function named computerPlay;
-    //Computer will then randomly select rock, paper or scissors;
-    //store the computer answer in a variable;
-
 function computerPlay(){
     const number = (Math.random() * 3);
     if (number <= 1){
@@ -32,22 +28,8 @@ function computerPlay(){
     } else return 'paper';
 }
 
-//Create a function that plays one round of rock paper scissors
-    //FUNCTION playRound() 1 round of R, P, S - compare user selection and computer selection, prompt a winner;
-    //IF (user = ROCK & computer = SCISSORS);
-            //PROMPT user wins;
-        //ELSE IF (user = ROCK & computer = PAPER);
-            //PROMPT computer wins;
-        //ELSE IF (user = PAPER & computer = ROCK);
-            //PROMPT user wins;
-        //ELSE IF (user = PAPER & computer = SCISSORS);
-            //PROMPT computer wins;
-        //ELSE IF (user = SCISSORS & computer = PAPER);
-            //PROMPT user wins;
-        //ELSE IF (user = SCISSORS & computer = ROCK);
-            //PROMPT computer wins;
-        // ELSE (user === computer);
-            // PROMPT (tie);
+//Create a function that plays one round of rock paper scissors;
+//Determine a scoring system
 let playerScore = 0;
 let computerScore = 0;
 function playRound(playerSelection, computerSelection){
