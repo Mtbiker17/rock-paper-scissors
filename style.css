@@ -36,6 +36,30 @@ body, html {
     display: flex;
     justify-content: center;
 }
+#rock:hover{
+    background-color: blue;
+    border-radius: 20%;
+    transition-duration: 1s;
+}
+#rock{
+    transition-duration: 1s;
+}
+#paper{
+    transition-duration: 1s;
+}
+#scissors{
+    transition-duration: 1s;
+}
+#paper:hover{
+    background-color: blue;
+    border-radius: 20%;
+    transition-duration: 1s;
+}
+#scissors:hover{
+    background-color: blue;
+    border-radius: 20%;
+    transition-duration: 1s;
+}
 .button {
     width: 200px;
     height: 200px;
