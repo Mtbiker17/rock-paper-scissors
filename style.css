@@ -36,34 +36,6 @@ body, html {
     display: flex;
     justify-content: center;
 }
-#rock:hover{
-    background-color: blue;
-    border-radius: 20%;
-    transition-duration: 1s;
-}
-#rock{
-    transition-duration: 1s;
-    outline: none;
-}
-#paper{
-    transition-duration: 1s;
-    outline: none;
-    
-}
-#scissors{
-    transition-duration: 1s;
-    outline: none;
-}
-#paper:hover{
-    background-color: blue;
-    border-radius: 20%;
-    transition-duration: 1s;
-}
-#scissors:hover{
-    background-color: blue;
-    border-radius: 20%;
-    transition-duration: 1s;
-}
 .button {
     width: 200px;
     height: 200px;
@@ -73,7 +45,15 @@ body, html {
     justify-content: center;
     align-items: center;
     background-color: black;
+    transition-duration: 1s;
+    outline: none;
 }
+.button:hover{
+    background-color: blue;
+    border-radius: 20%;
+    transition-duration: 1s;
+}
+
 #score-label{
     display: flex;
     justify-content: center;
