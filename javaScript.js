@@ -10,9 +10,9 @@ function computerPlay(){
 
 //Create a function that plays one round of rock paper scissors;
 //Determine a scoring system;
-let playerScore = 0;
-let computerScore = 0;
 function playRound(playerSelection, computerSelection){
+    let playerScore = 0;
+    let computerScore = 0;
     if (playerSelection == 'rock' && computerSelection == 'scissors'){
         playerScore++;
         return 'You win! Rock beats scissors!';
@@ -36,10 +36,19 @@ function playRound(playerSelection, computerSelection){
     }
 }
 //Write a function called game() playing 5 rounds of rock paper scissors and declaring a winner;
+function choice(){
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+   button.addEventListener('click', () => {
+       return button.id;
+   });
+});
+}
+
 function game(){
     for (i = 0; i < 5; i++){
-        let playerSelection = prompt("what do you choose? Rock, Paper, or Scissors?");
-        playerSelection = playerSelection.toLowerCase();
+        let playerSelection = choice();
+        console.log(playerSelection);
         const computerSelection = computerPlay();
         console.log(playRound(playerSelection, computerSelection));
     }
@@ -51,4 +60,5 @@ function game(){
         alert(`Wow, a draw! Try again! Final score: ${playerScore} to ${computerScore}`);
     }
 }
-game();
+
+

@@ -43,12 +43,16 @@ body, html {
 }
 #rock{
     transition-duration: 1s;
+    outline: none;
 }
 #paper{
     transition-duration: 1s;
+    outline: none;
+    
 }
 #scissors{
     transition-duration: 1s;
+    outline: none;
 }
 #paper:hover{
     background-color: blue;
@@ -68,6 +72,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
 }
 #score-label{
     display: flex;
