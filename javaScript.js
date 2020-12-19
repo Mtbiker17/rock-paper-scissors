@@ -1,5 +1,7 @@
 const buttons = document.querySelectorAll('button');
 let computerSelection = computerPlay();
+let playerScore = 0;
+let computerScore = 0;
 
 
 buttons.forEach((button) => {
@@ -7,6 +9,7 @@ buttons.forEach((button) => {
         let playerSelection = (button.id);
         playRound(playerSelection, computerPlay());
         console.log(playerScore);
+        console.log(computerScore);
     });
 });
 
@@ -23,9 +26,9 @@ function computerPlay(){
 
 //Create a function that plays one round of rock paper scissors;
 //Determine a scoring system;
-let playerScore = 0;
-let computerScore = 0;
+
 function playRound(playerSelection, computerSelection){
+    
     if (playerSelection == 'rock' && computerSelection == 'scissors'){
         playerScore++;
         console.log('You win! Rock beats scissors!');
