@@ -7,20 +7,18 @@ let playerScoreDisplay = document.querySelector('#playerScoreDisplay');
 let resultNotification = document.querySelector('#displayResults');
 
 
+
 function changeScore(){
     computerScoreDisplay.textContent = `${computerScore}`;
     playerScoreDisplay.textContent = `${playerScore}`;
-    resultNotification.textContent = `${resultString}`
+    resultNotification.textContent = `${resultString}`;
 }
-
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         let playerSelection = (button.id);
         playRound(playerSelection, computerPlay());
         changeScore();
-        console.log(playerScore);
-        console.log(computerScore);
     });
 });
 
@@ -59,16 +57,5 @@ function playRound(playerSelection, computerSelection){
         resultString = 'You lose! Computer chose rock, rock beats scissors!';
     } else if (playerSelection === computerSelection){
         resultString = 'Draw! You both selected the same, try again!';
-    }
-    return resultString;
-}
-//Write a function called game() playing 5 rounds of rock paper scissors and declaring a winner;
-function game(){
-    if (playerScore === 5 && computerScore < ){
-        alert(`You lost, sorry, the computer is the superior being...Final score: ${playerScore} to ${computerScore}`);
-    } else if (playerScore > computerScore){
-        alert(`You Won! Congratulations, you are the superior being! Final score: ${playerScore} to ${computerScore}`);
-    } else if (playerScore === computerScore){
-        alert(`Wow, a draw! Try again! Final score: ${playerScore} to ${computerScore}`);
     }
 }
