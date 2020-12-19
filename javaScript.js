@@ -2,12 +2,23 @@ const buttons = document.querySelectorAll('button');
 let computerSelection = computerPlay();
 let playerScore = 0;
 let computerScore = 0;
+let computerScoreDisplay = document.querySelector("#computerScoreDisplay");
+let playerScoreDisplay = document.querySelector('#playerScoreDisplay');
+let resultNotification = document.querySelector('#displayResults');
+
+
+function changeScore(){
+    computerScoreDisplay.textContent = `${computerScore}`;
+    playerScoreDisplay.textContent = `${playerScore}`;
+    resultNotification.textContent = `${resultString}`
+}
 
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         let playerSelection = (button.id);
         playRound(playerSelection, computerPlay());
+        changeScore();
         console.log(playerScore);
         console.log(computerScore);
     });
@@ -28,36 +39,32 @@ function computerPlay(){
 //Determine a scoring system;
 
 function playRound(playerSelection, computerSelection){
-    
     if (playerSelection == 'rock' && computerSelection == 'scissors'){
         playerScore++;
-        console.log('You win! Rock beats scissors!');
+        resultString = 'You win! Rock beats scissors!';
     } else if (playerSelection == 'rock' && computerSelection == 'paper'){
         computerScore++;
-        console.log('You lose! Computer chose paper, paper beats rock!');
+        resultString = 'You lose! Computer chose paper, paper beats rock!';
     } else if (playerSelection == 'paper' && computerSelection == 'rock'){
         playerScore++;
-        console.log('You win! Paper beats rock!');
+        resultString = 'You win! Paper beats rock!';
     } else if (playerSelection == 'paper' && computerSelection == 'scissors'){
         computerScore++;
-        console.log('You lose! Computer chose scissors, scissors beats paper!');
+        resultString = 'You lose! Computer chose scissors, scissors beats paper!';
     } else if (playerSelection == 'scissors' && computerSelection == 'paper'){
          playerScore++;
-        console.log('You win! Scissors beats paper!');
+        resultString = 'You win! Scissors beats paper!';
     } else if (playerSelection == 'scissors' && computerSelection == 'rock'){
-        console.log('You lose! Computer chose rock, rock beats scissors!');
         computerScore++;
+        resultString = 'You lose! Computer chose rock, rock beats scissors!';
     } else if (playerSelection === computerSelection){
-        console.log('Draw! You both selected the same, try again!');
+        resultString = 'Draw! You both selected the same, try again!';
     }
+    return resultString;
 }
 //Write a function called game() playing 5 rounds of rock paper scissors and declaring a winner;
 function game(){
-    for (i = 0; i < 5; i++){
-      const computerSelection = computerPlay();
-      console.log(playRound(playerSelection, computerSelection));
-    }
-    if (playerScore < computerScore){
+    if (playerScore === 5 && computerScore < ){
         alert(`You lost, sorry, the computer is the superior being...Final score: ${playerScore} to ${computerScore}`);
     } else if (playerScore > computerScore){
         alert(`You Won! Congratulations, you are the superior being! Final score: ${playerScore} to ${computerScore}`);
