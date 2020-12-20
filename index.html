@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock, Paper, Scissors!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id = "body">
+    <div id = "newMain">
+    <h1 class = "header">Rock, Paper, Scissors!</h1>
+    <p class = "intro-text">Do you dare challenge the computer?</p>
+    <p class = "intro-text2">Make your selection below, first to 5 wins!</p>
+    </div>
+<div id = "game-container">
+    <div id = "btn-container">
+        <button id = "rock" class = "button">
+            <p class = "intro-text" >ROCK</p>
+        </button>
+        <button id = "paper" class = "button">
+            <p class = "intro-text">PAPER</p>
+        </button>
+        <button id = "scissors" class = "button">
+            <p class = "intro-text">SCISSORS</p>
+        </button>
+    </div>
+    <div id = "score-label">
+        <p class = "label">Computer Score</p>
+        <p class = "label">Your Score</p>
+    </div>
+    <div id = "score">
+        <div id = "computerScoreDisplay" class = "show-score">0</div> <!--THIS WILL BE THE computer SCORE JS-->
+        <div id = "playerScoreDisplay" class = "show-score">0</div> <!--THIS WILL BE THE player SCORE JS-->
+    </div>
+    <div id = "displayResults" class = "results"></div><!-- results will go here -->
+</div> 
+<script src = "javaScript.js"></script>
+</body>
+</html>
